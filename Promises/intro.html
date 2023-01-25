@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+<h1>Hello World!</h1>
+</body>
+<script>
+    
+    // const createOrder = require('createOrder');
+    /*
+promise is very useful when we are dealing with asynchronous operations
+in js, A Promise can be thought as a container which has to be fills with 
+the data after
+some time or may not fills.
+
+in short , it is an object  representing the eventual completions or failure of an operation
+object which will br filled after some time
+*/
+//with out promise ,we can handle the asyc operations using callbacks fun
+//for eg. 
+
+const cart=['shoes', 'food', 'phone','tv'];
+
+//we want to create a order at the backend side and
+
+//  createOrder(cart,(OrderId)=>{
+//      GoToPaymentPage(OrderId);
+// })
+
+//this above solution might creates an issue like after cart/orderID is created
+//next GoToPaymentPage() method may take time to complete the transaction and
+//there might be chances that gotoPayment() will further calling the ANOTHER 
+//CALLBACK fUNCTION and so on...
+//this problem we can called as a inversion of control.
+
+//promises helps us to provides way to avoid such problem
+
+// let promise=createOrder(cart);  //API -createOrder
+//promise is an Object , initially it might undefined and  when the promise
+//the resolved it will filled with the data
+// console.log(promise)
+
+let data=fetch("https://api.github.com/users/arunkumar201")
+console.log(data)
+</script>
+</html>

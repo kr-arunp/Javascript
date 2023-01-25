@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <button id="btn" onclick="clickHandler()">click me</button>
+      <h1 class="text" ondblclick="changeColor()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit iusto quos.</h1>
+      
+      <p class="ptxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, tempore. Placeat quas laudantium deserunt praesentium reiciendis ratione ad eaque provident, doloribus consequatur ea est aperiam veniam sequi porro eligendi. Optio!</p>
+</body>
+<script>
+  let ele=document.querySelector('.ptxt');
+  
+  ele.addEventListener('click',(() => {alert("You Have clicked ")}).bind(ele));
+  
+  const clickHandlerPh = () => {
+    alert("You Have clicked ")
+  }
+//   function clickHandlerP(){
+//      alert("You have clicked ")
+//   }
+  
+
+
+
+
+   let b=document.getElementById("btn");
+   let txt=document.querySelector('.text');
+   function changeColor(){
+       txt.style.color='red';
+       txt.style.backgroundColor='black';
+       txt.innerHTML+="Hello world!";    
+   } 
+function clickHandler(){
+alert("Click me!");
+  }
+</script>
+</html>
