@@ -14,9 +14,8 @@ setName(newName){
     }
     this.Name=newName;
     return "Success";
+ }
 }
-}
-
 let s1=new StuName("Aakash");
 console.log(s1.getName())
 s1.setName("Raju");
