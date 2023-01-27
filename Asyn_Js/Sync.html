@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Asynchronous JS</h1>
+</body>
+<script>
+      function fun1(){
+    console.log("I AM Function 1");
+  }
+  function fun2(){
+     console.log("I AM Function 2");
+  }
+  function fun3(){
+  console.log("I AM Function 3");
+  }
+  console.log("I ");  
+  console.log("Love")
+  console.log("problems solving ");
+  //Async Operations
+  let Fun2_ID=setTimeout(()=>fun2(),2001);
+ let Fun3_ID=setTimeout(()=>fun1(),2000);
+  fun3();
+  console.log(Fun2_ID);
+ 
+  console.log(Fun3_ID);
+  
+//  let id= setInterval(()=>{
+// 	  get_time()
+// 	},1000);
+	function get_time(){
+	let d=new Date();
+	console.log(d.toLocaleTimeString());
+}
+console.log(id)
+
+</script>
+</html>
+

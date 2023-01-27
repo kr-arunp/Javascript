@@ -1,0 +1,58 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Functionalities</title>
+  </head>
+  <body>
+    <h1>Sign- in Functionalities</h1>
+  </body>
+
+  <script>
+    let Register = (cb_login) => {
+      console.log("User Is Successfully Registered");
+      cb_login();
+    };
+    let login = (cb_DisplayData) => {
+      console.log("Login Successfully");
+      cb_DisplayData();
+    };
+
+    let ShowUserData = (cb_Logout) => {
+      console.log("User Data is Displayed");
+      cb_Logout();
+    };
+    let logout = () => {
+      console.log("Logout Successfully");
+    };
+    //lets say for registering the new User might take some time
+    // Let say it takes 3s
+    setTimeout(() => {
+      Register(() => {
+        setTimeout(() => {
+          login(() => {
+            setTimeout(() => {
+              ShowUserData(() => {
+                setTimeout(() => {
+                  logout();
+                }, 1000);
+              });
+            }, 4000);
+          });
+        }, 2000);
+      });
+    }, 3000);
+    console.log("Rest of the Functions of the App is Working well");
+    //let says Login takes 2s
+
+    //lets say fetching the user data from the server will
+    //take about 4s
+
+    //let says for logout it might take 1s
+    
+  </script>
+</html>
