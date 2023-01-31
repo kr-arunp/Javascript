@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Callback Example</title>
+</head>
+<body>
+	<h1>CallBack Example hy</h1>
+</body>
+<script>
+/*
+   1.place the Order takes 2s
+   2.cut the fruits took 2s
+*/
+   let stocks = {
+    Fruits : ["strawberry", "grapes", "banana", "apple"],
+    liquid : ["water", "ice"],
+    holder : ["cone", "cup", "stick"],
+    toppings : ["chocolate", "peanuts"],
+    
+ };
+ 
+let Order =()=>{
+     setTimeout(()=>{
+    console.log("production has started")
+    setTimeout(()=>{
+      console.log("The fruit has been chopped")
+      setTimeout(()=>{
+        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} Added`)
+        setTimeout(()=>{
+          console.log("start the machine")
+          setTimeout(()=>{
+            console.log(`Ice cream placed on ${stocks.holder[1]}`)
+            setTimeout(()=>{
+              console.log(`${stocks.toppings[0]} as toppings`)
+              setTimeout(()=>{
+                console.log("serve Ice cream")
+              },2000)
+            },3000)
+          },2000)
+        },1000)
+      },1000)
+    },2000)
+  },0000)
+}
+//Above code might not fit or not a good practice ,it creates the problem 
+//called ad callback Hell 
+//to resolve it we will have the concept of promises in js 
+//it provide clean and concise way to handle the Asyc Operations 
+/*
+"Callback hell" refers to a state of 
+confusion and complexity that can arise when using nested asynchronous callbacks in programming. 
+It often occurs when code uses too many levels of indentation,
+making the code difficult to read and maintain
+*/
+ 
+   Order();
+   
+   
+   
+   </script>
+</html>

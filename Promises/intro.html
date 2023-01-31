@@ -44,6 +44,21 @@ const cart=['shoes', 'food', 'phone','tv'];
 //promise is an Object , initially it might undefined and  when the promise
 //the resolved it will filled with the data
 // console.log(promise)
+//Syntax of the promise
+
+let MyPromise =new Promise((resolve,reject) => {
+    //condition
+    let isOpen=true;
+    if(isOpen){
+       resolve( action());
+    }else{
+    
+       reject(console.log("something went wrong"))
+    }
+
+})
+.then(()=>console.log("success")
+)
 
 let data=fetch("https://api.github.com/users/arunkumar201")
 console.log(data)

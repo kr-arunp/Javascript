@@ -1,0 +1,19 @@
+A Promise in JavaScript is an object that represents a value that may not be available yet, 
+but will be at some point in the future. 
+It is used to handle asynchronous operations and provide a way to handle the results of these 
+operations, once they are available.
+
+Promises are created using the Promise constructor, which takes a function as an argument.
+This function is called the executor and receives two functions as arguments: resolve and reject. 
+The executor is responsible for performing the asynchronous operation and calling resolve or
+reject depending on the outcome.
+
+Once a Promise has been created, it can be consumed using its then method,
+which takes two functions as arguments: onFulfilled and onRejected. 
+The onFulfilled function is called when the Promise is resolved, 
+and the onRejected function is called when the Promise is rejected.
+
+Promises are a useful tool for handling asynchronous operations in JavaScript, 
+as they provide a way to manage the results of these operations 
+in a predictable and organized way.
+
